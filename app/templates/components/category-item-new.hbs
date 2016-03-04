@@ -1,0 +1,29 @@
+{{#if addNewCategoryItem}}
+<h1>New Item</h1>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="description">Item</label>
+        {{input value=item id="item"}}
+      </div>
+
+      <div class="form-group">
+        <label for="author">Description</label>
+        {{input value=description id="description"}}
+      </div>
+
+      <div class="form-group">
+        <label for="author">Add image</label>
+        {{input value=item_image id="item_image"}}
+      </div>
+
+      <div class="form-group">
+        <label for="author">Cost</label>
+        {{input value=item_cost id="item_cost"}}
+      </div>
+      <button {{action 'saveCategoryItem'}}>Save</button>
+    </form>
+  </div>
+ {{else}}
+    <button class="btn btn-success"{{action 'categoryItemFormShow'}}>New question</button>
+{{/if}}

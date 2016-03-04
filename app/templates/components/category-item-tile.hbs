@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>{{category.description}}</h2>
+  {{#if category}}
+    {{#each category as |item|}}
+      <div class="row well">
+        <div class="col-md-12">
+          <li>{{item.item}}</li>
+        </div>
+      </div>
+    {{/each}}
+  {{else}}
+    <h2>Let's add some Bike items!</h2>
+  {{/if}}
+  {{log category}}
+  {{category-item-new category=category saveCategoryItem='saveCategoryItem' }}
+</div>

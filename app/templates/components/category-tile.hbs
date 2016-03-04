@@ -1,0 +1,14 @@
+<div class="container">
+  {{#if categories}}
+    {{#each categories as |category|}}
+      <div class="row well">
+        <div class="col-md-12">
+          <li>{{#link-to 'category' category.id }}{{category.description}}{{/link-to}}</li>
+        </div>
+      </div>
+    {{/each}}
+  {{else}}
+    <h2>Let's add some Bike Stuff!</h2>
+  {{/if}}
+  {{category-new saveCategory='saveCategory' }}
+</div>

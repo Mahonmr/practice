@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+    {{#each categories as |category|}}
+    <div class="col-md-2 well" style="margin: 2em auto;">
+      <img style="max-width:100px;" src="{{category.category_image}}"alt="" /><br>
+      <li>{{#link-to 'view_category' category.id }}{{category.description}}{{/link-to}}</li>
+    </div>
+    {{/each}}
+  </div>
+</div>
